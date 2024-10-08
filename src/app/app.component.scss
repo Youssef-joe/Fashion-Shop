@@ -1,0 +1,8 @@
+.wrapper {
+  height: auto;
+  padding: 20px;
+  width: 100%;
+
+  flex-grow: 1; // this way the wrapper is gonna grow automatically once we set the rest of styles
+  box-sizing: border-box;
+}
