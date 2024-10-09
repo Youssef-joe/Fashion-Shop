@@ -52,3 +52,13 @@ export interface paginationParams {
   page: number;
   perPage: number;
 }
+
+
+export interface shopProduct {
+  id: number,
+  title: string,
+  price: string,
+  category: string,
+  description: string,
+  image: string
+}

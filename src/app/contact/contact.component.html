@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Contact Us</h2>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+        <div class="p-fluid">
+            <div class="p-field">
+                <label for="name">Name</label>
+                <input type="text" pInputText id="name" name="name" [(ngModel)]="contact.name" required>
+            </div>
+            <div class="p-field">
+                <label for="email">email</label>
+                <input type="text" pInputText id="email" name="email" [(ngModel)]="contact.email" required>
+            </div>
+            <div class="p-field">
+                <label for="message">Message</label>
+                <textarea type="text" pInputText id="message" name="message" [(ngModel)]="contact.message" required></textarea>
+            </div>
+        </div>
+        <button pButton type="submit" label="send" rows="5" cols="30"></button>
+    </form>
+</div>
