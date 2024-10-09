@@ -28,9 +28,9 @@
   <div class="arrivals-grid" *ngIf="newArrivals">
     <div class="product-card" *ngFor="let product of newArrivals">
 
-      <img [src]="product.image" alt="">
-      <h3> {{product.name}} </h3>
-      <p> {{product.price}} </p>
+      <img [src]="product.images" alt="">
+      <h3> {{product.title}} </h3>
+      <p> {{product.price}} $ </p>
 
       <button pButton label="View Details" class="p-button-rounded"></button>
 

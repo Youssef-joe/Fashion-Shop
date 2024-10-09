@@ -22,7 +22,7 @@ import { HttpClient, HttpClientModule, HttpParams } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) {}
-  newArrivals = [{ name: '', price: '', image: '' }];
+  newArrivals: any[] = [];
 
   featuredProducts: any[] = [];
   featuredProductsLimit: number = 6;
@@ -40,6 +40,8 @@ export class HomeComponent implements OnInit {
     this.http.get<any[]>(apiUrl, { params: params }).subscribe(
       (data) => {
         this.featuredProducts = data.slice(0, this.featuredProductsLimit);
+        this.newArrivals = data.slice(10, 16);
+        
       },
       (error) => {
         console.error('featured products error:', error);
