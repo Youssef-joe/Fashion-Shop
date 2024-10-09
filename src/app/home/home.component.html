@@ -1,1 +1,40 @@
-<p>Home Works</p>
+<div class="home-container">
+
+  <!-- Main Section -->
+   <div class="main">
+    <h1>Welcome To Fashion Store</h1>
+    <p>Discover Amazing Products </p>
+
+   </div>
+
+   <!-- Featured Products Section -->
+    <div class="featured-products">
+      <h2>Featured Products</h2>
+      <div class="products-grid" *ngIf="featuredProducts">
+        <div class="product-card" *ngFor="let product of featuredProducts">
+          <!-- Fetch ur data here -->
+          <img [src]="product.images" alt="Product Image">
+           <h3> {{product.title}} </h3>
+           <p> {{product.price}} $ </p>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!-- New Arrivals Section -->
+ <div class="new-arrivals">
+  <h2>New Arrivals</h2>
+  <div class="arrivals-grid" *ngIf="newArrivals">
+    <div class="product-card" *ngFor="let product of newArrivals">
+
+      <img [src]="product.image" alt="">
+      <h3> {{product.name}} </h3>
+      <p> {{product.price}} </p>
+
+      <button pButton label="View Details" class="p-button-rounded"></button>
+
+    </div>
+  </div>
+ </div>
+
