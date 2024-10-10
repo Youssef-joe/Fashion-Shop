@@ -91,7 +91,7 @@ export class ShopComponent {
 
   fetchProduct(page: number, perPage: number) {
     this.productServices
-      .getProducts('http://localhost:3000/clothes', { page, perPage })
+      .getProducts('server-deployment-production.up.railway.app/clothes', { page, perPage })
       .subscribe({
         next: (data: Products) => {
           this.products = data.items;
@@ -105,7 +105,7 @@ export class ShopComponent {
 
   editProduct(product: Product, id: number) {
     this.productServices
-      .editProduct(`http://localhost:3000/clothes/${id}`, product)
+      .editProduct(`server-deployment-production.up.railway.app/clothes/${id}`, product)
       .subscribe({
         next: (data) => {
           console.log(data);
@@ -120,7 +120,7 @@ export class ShopComponent {
 
   deleteProduct(id: number) {
     this.productServices
-      .deleteProduct(`http://localhost:3000/clothes/${id}`)
+      .deleteProduct(`server-deployment-production.up.railway.app/clothes/${id}`)
       .subscribe({
         next: (data) => {
           console.log(data);
@@ -134,7 +134,7 @@ export class ShopComponent {
 
   addProduct(product: Product) {
     this.productServices
-      .addProduct(`http://localhost:3000/clothes`, product)
+      .addProduct(`server-deployment-production.up.railway.app/clothes`, product)
       .subscribe({
         next: (data) => {
           console.log(data);

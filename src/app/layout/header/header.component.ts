@@ -25,7 +25,8 @@ export class HeaderComponent {
             {label:'home & garten', routerLink:'categories/home-garten'}
           ]
         },
-        {label:'contact', icon:'pi pi-fw pi-phone', routerLink:'/contact'}
+        {label:'contact', icon:'pi pi-fw pi-phone', routerLink:'/contact'},
+        {label:'register', icon:'pi pi-fw pi-user', routerLink:'/register'}
     ]
   }
 

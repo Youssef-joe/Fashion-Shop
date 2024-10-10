@@ -1,0 +1,26 @@
+<div class="register-container">
+  <div class="register-form">
+    <p-floatLabel>
+      <input id="username" type="text" pInputText [(ngModel)]="username" />
+      <label for="username">Username</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <input id="email" type="text" pInputText [(ngModel)]="email" />
+      <label for="email">email</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <input id="password" type="text" pInputText [(ngModel)]="password" />
+      <label for="password">password</label>
+    </p-floatLabel>
+
+    <button
+      pButton
+      label="submit"
+      severity="contrast"
+      [rounded]="true"
+      [raised]="true"
+      [loading]="loading"
+      (click)="load()"
+    ></button>
+  </div>
+</div>
